@@ -1,0 +1,45 @@
+extends layout.pug 
+
+block tasks
+
+    if error 
+        p.error Please fill it 
+
+    if success 
+        p.success Good Job
+
+    if deleted 
+        p.success Task deleted Successfully!
+
+    form.form(action='/add' method='POST')
+        input.input(type="text" placeholder='Add your task here!' name='todo')
+        button.add Add
+
+    .todos 
+        if todos && todos.length
+            each todo in todos      
+                div.todo 
+                    if todo.done
+                        span.done #{ todo.description }
+                    else 
+                        span.undone #{ todo.description }
+                    .buttons
+                        button
+                            a.update(href=`/${ todo.id }/update`) Done
+                        button(onclick=`testFunc(${JSON.stringify(todo)})`)
+                            a.edit Edit
+                        button
+                            a.delete(href=`/${ todo.id }/delete`) Delete
+        else 
+            p.todo Tasks are not available
+
+    script.  
+        function testFunc(todo) {
+            const div = document.createElement("div");
+            div.innerHTML = `<form action='${todo.id}/edit' method="POST">
+                    <input type="hidden" name="id" value="${todo.id}">
+                    <input class="edit-input" type="text" name="description" value="${todo.description}">
+                    <button class="edit-btn" type="submit">Save</button></form>`
+
+            document.getElementsByClassName("todos")[0].appendChild(div);
+        }

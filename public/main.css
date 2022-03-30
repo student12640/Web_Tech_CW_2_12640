@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #e5e5e5;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 30px auto;
+}
+
+.logo {
+    text-align: center;
+    color: #114a37;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.error {
+    display: inline-block;
+    padding: 10px 20px;
+    color: red;
+    border: 2px solid rgba(255, 99, 71, 0.514);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.success {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #1cb072;
+    border: 2px solid #1cb07281;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    background: #114a3769;
+    border: 2px solid rgba(255, 255, 255, 0.377);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    background: #114a37;
+    border: 2px solid #fff;
+}
+
+input:focus::placeholder {
+    color: #fff;
+}
+
+::placeholder {
+    color: #114a37;
+}
+
+.add {
+    width: fit-content;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: #114a37;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    transition: 0.3s;
+}
+
+.add:hover {
+    background-color: #15c57c;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    color: #114a37;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.todo:hover {
+    background: rgb(238, 231, 231);
+    box-shadow: 0px 9px 25px -12px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 9px 25px -12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 9px 25px -12px rgba(0, 0, 0, 1);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.buttons button {
+    border: none;
+}
+
+.delete {
+    font-size: 12px;
+    padding: 8px 20px;
+    color: #fff;
+    background: #f34c54;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.delete:hover {
+    background: #eb3b44;
+}
+
+.update {
+    font-size: 12px;
+    padding: 8px 20px;
+    color: #fff;
+    background: rgb(0, 140, 255);
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.edit {
+    font-size: 12px;
+    padding: 8px 20px;
+    color: #fff;
+    background: rgb(228, 217, 74);
+    transition: 0.3s;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.done {
+    font-size: 14px;
+    color: tomato;
+    text-decoration: line-through;
+}
+
+.edit-input,
+.edit-btn {
+    margin: 30px auto;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #114a37;
+    transition: 0.3s;
+}
+
+.edit-input:focus {
+    color: #fff;
+}
+
+.edit-btn {
+    padding: 8px 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    background: rgb(228, 217, 74);
+    border: none;
+    color: #fff;
+}
