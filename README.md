@@ -24,6 +24,7 @@ This application's main purpose is to help manage tasks during day. The app is f
  - express
 
 # Link of the github repository
-
+https://github.com/student12640/Web_Tech_CW_2_12640
 
 # Website URL
+https://famous-materialistic-captain.glitch.me/
