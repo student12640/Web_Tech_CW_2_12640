@@ -2,7 +2,7 @@ const express = require("express");
 const { render } = require("express/lib/response");
 const app = express();
 const fs = require("fs");
-const PORT = 5000;
+const PORT = 5000 || process.env.PORT;
 
 app.set("view engine", "pug");
 app.use("/static", express.static("public"));
