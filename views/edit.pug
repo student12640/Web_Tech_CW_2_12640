@@ -1,0 +1,13 @@
+extends layout.pug 
+
+block tasks
+
+    if error 
+        p.error Please fill it 
+
+    if success 
+        p.success Good Job
+    div.container
+    form.AddForm(action=`/edit` method="POST")
+      input.userInput(type="text"  name="note" value=`${NoteToBeEdite.desc}`)
+      button.btn Update
